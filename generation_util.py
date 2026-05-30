@@ -1,14 +1,13 @@
 import re
 import random
 import torch
-import openai
-from ratelimiter import RateLimiter
-from retrying import retry
+#import openai
+#from ratelimiter import RateLimiter
+#from retrying import retry
+from transformers import AutoTokenizer, AutoModelForCausalLM
 from transformers import (
     LlamaForCausalLM,
     LlamaTokenizer,
-    AutoTokenizer,
-    AutoModelForCausalLM,
     StoppingCriteria,
     StoppingCriteriaList,
 )
@@ -22,8 +21,9 @@ RECLETTER_PROMPTS = [
 # openai.organization = $YOUR_ORGANIZATION$
 # openai.api_key = $YOUR_API_KEY$
 
-@retry(stop_max_attempt_number=10)
-@RateLimiter(max_calls=1200, period=60)
+
+#@retry(stop_max_attempt_number=10)
+#@RateLimiter(max_calls=1200, period=60)
 def generate_chatgpt(utt):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo", messages=[{"role": "user", "content": utt}]
@@ -31,8 +31,41 @@ def generate_chatgpt(utt):
     print('Letter: {}'.format(response["choices"][0]["message"]["content"].strip()))
     return response["choices"][0]["message"]["content"].strip()
 
-@retry(stop_max_attempt_number=10)
-@RateLimiter(max_calls=1200, period=60)
+def load_llama(device):
+    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-3.1-8B-Instruct")
+    model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-3.1-8B-Instruct").to(device)
+    return tokenizer, model
+
+
+def generate_llama(utt, device, tokenizer=None, model=None):
+    if tokenizer is None or model is None:
+        tokenizer, model = load_llama(device)
+
+    messages = [
+        {"role": "user", "content": utt},
+    ]
+    inputs = tokenizer.apply_chat_template(
+        messages,
+        add_generation_prompt=True,
+        tokenize=True,
+        return_dict=True,
+        return_tensors="pt",
+    ).to(model.device)
+
+    with torch.no_grad():
+        outputs = model.generate(
+            **inputs,
+            max_new_tokens=512,
+            temperature=0.1,
+            top_p=0.75,
+            top_k=40,
+        )
+
+    text = tokenizer.decode(outputs[0][inputs["input_ids"].shape[-1]:], skip_special_tokens=True)
+    return text.strip()
+
+#@retry(stop_max_attempt_number=10)
+#@RateLimiter(max_calls=1200, period=60)
 def generate_response_rec_chatgpt(arguments):  # ,bio):
     """
     :param arguments: a dictionary to take name and occupation for rec letter

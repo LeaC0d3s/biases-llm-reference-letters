@@ -1,1 +1,1 @@
-python biases_string_matching.py -f ./generated_letters/chatgpt/clg/clg_letters.csv -m chatgpt
+python biases_string_matching.py -f ./generated_letters/llama3.1-8B-Instruct/clg/clg_letters.csv -m llama -o ./evaluated_letters/llama3.1-8B-Instruct/clg/clg_biases.csv

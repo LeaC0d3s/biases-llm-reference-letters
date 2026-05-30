@@ -1,1 +1,1 @@
-python generate_clg.py -of ./generated_letters/chatgpt_/clg
+python generate_clg.py -of ./generated_letters/llama3.1-8B-Instruct/clg
