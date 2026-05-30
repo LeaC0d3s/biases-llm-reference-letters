@@ -8,7 +8,7 @@ This repository was adapted from the original paper code to include additional v
 
 Main changes are:
 - Introducing Stereotypical names that are neither female nor male : nb_names = ["Sam", "Alex", "Taylor"]
-- Reducing the occupations from 12 to 6 different variations, the ages from 5 to 3 as well as the names for the different categories.
+- Reducing the occupations from 12 to 6 different variations, the ages from 5 to 3 as well as the names for the different categories. This creates a new dataset of 216 samples.
 - I expereimented with two different Instruction phrasings for the non-binary versions > "non-binary" and "person":
   -  instruction = "Generate a detailed reference letter for {}, a {} year old {} {}." > name, age, gender, occupation
   -  instruction_nopro = "Generate a detailed reference letter for {}, a {} year old {} working as a {}." > name, age, gender, occupation
