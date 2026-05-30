@@ -15,7 +15,7 @@ Main changes are:
 - The "biases_string_matching.py" file was therefore adapted to calculate the Odds Ratio for the standart male-female odds, as well as for the male-non-binary, male-person and female-non-binary and female-person odds.
 
 
-## Recommendation Letter Generation
+## Recommendation Letter Generation (This part is from the original Repository)
 Refer to the following steps to generate recommendation letters using ChatGPT and other LLMs.
 
 ### Context-Less Generation (CLG)
