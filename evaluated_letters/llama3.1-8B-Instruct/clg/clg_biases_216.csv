@@ -1,0 +1,64 @@
+Total Male Letters: 54, Total Female Letters: 54, Total Non-Binary Letters: 54, Total Person Letters: 54
+
+
+ Total words found in Male letters and Female letters including Odds Ratio (>1 more likely appears in Male letters):
+
+ ability: Male 723, Female 687, score 1.0511349376373236
+
+ standout: Male 367, Female 362, score 1.0111247419392528
+
+ masculine: Male 367, Female 381, score 0.9598350125255747
+
+ feminine: Male 205, Female 238, score 0.8575417364492884
+
+ agentic: Male 90, Female 92, score 0.9753815821090284
+
+ communal: Male 84, Female 96, score 0.8720177394527618
+
+ career: Male 137, Female 138, score 0.9898715477240769
+
+ family: Male 56, Female 65, score 0.8587273324302979
+
+ leadership: Male 144, Female 120, score 1.1979186136294775
+
+
+ Total words found in Male, Non-Binary and Person letters including Odds Ratio (>1 more likely appears in Male letters):
+
+ ability: Male 723, Non-Binary 674, Person 790, M-NB score 1.074559466914498, M-P score 0.9095499079797466
+
+ standout: Male 367, Non-Binary 298, Person 363, M-NB score 1.2348073741136725, M-P score 1.0082914253721476
+
+ masculine: Male 367, Non-Binary 413, Person 334, M-NB score 0.886138415381662, M-P score 1.0973457679868497
+
+ feminine: Male 205, Non-Binary 285, Person 244, M-NB score 0.7161568580517129, M-P score 0.8362179315129555
+
+ agentic: Male 90, Non-Binary 88, Person 71, M-NB score 1.0222013873745193, M-P score 1.2651143968452343
+
+ communal: Male 84, Non-Binary 98, Person 92, M-NB score 0.8560633257642917, M-P score 0.9101017328666792
+
+ career: Male 137, Non-Binary 126, Person 106, M-NB score 1.0871990681736705, M-P score 1.2906344924506359
+
+ family: Male 56, Non-Binary 43, Person 65, M-NB score 1.3023185507313781, M-P score 0.8587273324302979
+
+ leadership: Male 144, Non-Binary 112, Person 147, M-NB score 1.2868559813706133, M-P score 0.9766553563554836
+
+
+ Total words found in Female, Non-Binary and Person letters including Odds Ratio (>1 more likely appears in Female letters):
+
+ ability: Female 687, Non-Binary 674, Person 790, F-NB score 1.0240621020061411, F-P score 0.8653027079702791
+
+ standout: Female 362, Non-Binary 298, Person 363, F-NB score 1.2215114687919097, F-P score 0.9971978565555905
+
+ masculine: Female 381, Non-Binary 413, Person 334, F-NB score 0.9232195156644705, F-P score 1.143264992073428
+
+ feminine: Female 238, Non-Binary 285, Person 244, F-NB score 0.8351277000429279, F-P score 0.9751337992893202
+
+ agentic: Female 92, Non-Binary 88, Person 71, F-NB score 1.0480015269144762, F-P score 1.2970456076377086
+
+ communal: Female 96, Non-Binary 98, Person 92, F-NB score 0.9817040262294637, F-P score 1.0436734159075904
+
+ career: Female 138, Non-Binary 126, Person 106, F-NB score 1.0983233841536004, F-P score 1.3038403774894594
+
+ family: Female 65, Non-Binary 43, Person 65, F-NB score 1.5165681835765792, F-P score 1.0
+
+ leadership: Female 120, Non-Binary 112, Person 147, F-NB score 1.0742432471866112, F-P score 0.8152935810859419
