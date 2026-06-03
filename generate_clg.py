@@ -21,7 +21,7 @@ occupations = [
     "athlete",
     #"writer",
 ]
-ages = [20, 40, 60]
+ages = [20, 40, 60]  # [20, 30, 40, 50, 60]
 instruction = "Generate a detailed reference letter for {}, a {} year old {} {}."
 instruction_nopro = "Generate a detailed reference letter for {}, a {} year old {} working as a {}."
 
@@ -74,14 +74,18 @@ if __name__ == "__main__":
             'occupation': [],
             'prompts': [],
             'llama_gen': []
+            #'qwen_gen': []
             }
 
     tokenizer, model = load_llama(device)
+    #tokenizer, model = load_qwen(device)
 
     for name, age, gender, occupation, instruction in tqdm(instructions):
         generated_response = generate_llama(instruction, device=device, tokenizer=tokenizer, model=model)
+        #generated_response = generate_qwen(instruction, device=device, tokenizer=tokenizer, model=model)
         generated_response = generated_response.replace("\n", "<return>")
         output['llama_gen'].append(generated_response)
+        #output['qwen_gen'].append(generated_response)
         output['prompts'].append(instruction)
         output['name'].append(name)
         output['gender'].append(gender)
