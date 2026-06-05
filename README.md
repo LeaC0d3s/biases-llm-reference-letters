@@ -2,6 +2,7 @@
 Public repository for the EMNLP 2023 Findings paper: **"Kelly is a Warm Person, Joseph is a Role Model": Gender Biases in LLM-Generated Reference Letters.**
 
 Arxiv version available at: https://arxiv.org/abs/2310.09219
+Original Repository: https://github.com/uclanlp/biases-llm-reference-letters
 
 # Changes from Original:
 This repository was adapted from the original paper code to include additional variation for CLG Reference Letter generation. The purpose of these adjustements is to create a practical contribution for a Seminar Paper in the course "Model Analysis and Interpretability in NLP" at UZH. Inspired by the Original Research I wanted to build upon what is already there and experiment with different instruction. Because I work on a "No Budget" Budget I changed the base model that was originally used for CLG from chatgpt to llama3.1-8B-Instruct. It is open source and a size that makes local inference calls possible for a small dataset. The max_new_token was set to 512 to avoid overly long outputs but still give some room to elaborate. This causes some reference letters to be cut short.
