@@ -2,6 +2,7 @@
 Public repository for the EMNLP 2023 Findings paper: **"Kelly is a Warm Person, Joseph is a Role Model": Gender Biases in LLM-Generated Reference Letters.**
 
 Arxiv version available at: https://arxiv.org/abs/2310.09219
+
 Original Repository: https://github.com/uclanlp/biases-llm-reference-letters
 
 # Changes from Original:
